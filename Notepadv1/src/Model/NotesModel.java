@@ -14,7 +14,7 @@
  * the License.
  */
 
-package com.android.demo.notepad1;
+package Model;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -34,7 +34,7 @@ import android.util.Log;
  * of using a collection of inner classes (which is less scalable and not
  * recommended).
  */
-public class NotesDbAdapter {
+public class NotesModel {
 
     public static final String KEY_TITLE = "title";
     public static final String KEY_BODY = "body";
@@ -84,7 +84,7 @@ public class NotesDbAdapter {
      * 
      * @param ctx the Context within which to work
      */
-    public NotesDbAdapter(Context ctx) {
+    public NotesModel(Context ctx) {
         this.mCtx = ctx;
     }
 
@@ -97,7 +97,7 @@ public class NotesDbAdapter {
      *         initialization call)
      * @throws SQLException if the database could be neither opened or created
      */
-    public NotesDbAdapter open() throws SQLException {
+    public NotesModel open() throws SQLException {
         mDbHelper = new DatabaseHelper(mCtx);
         mDb = mDbHelper.getWritableDatabase();
         return this;
