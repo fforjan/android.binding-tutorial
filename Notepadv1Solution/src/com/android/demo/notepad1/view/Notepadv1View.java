@@ -20,7 +20,6 @@ import gueei.binding.app.BindingActivity;
 import android.os.Bundle;
 
 public class Notepadv1View extends BindingActivity {
-    private int mNoteNumber = 1;
 
     /** Called when the activity is first created. */
     @Override
