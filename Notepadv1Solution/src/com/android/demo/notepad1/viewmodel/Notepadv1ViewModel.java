@@ -1,14 +1,27 @@
 package com.android.demo.notepad1.viewmodel;
 
-import gueei.binding.collections.ArrayListObservable;
+import gueei.binding.cursor.CursorObservable;
+
+import com.android.demo.notepad1.model.NotesModel;
 
 public class Notepadv1ViewModel {
 
-	public ArrayListObservable Notes;
+	public CursorObservable<NoteViewModel> Notes;
 	
-	public Notepadv1ViewModel()
+	private NotesModel mModel;
+	public Notepadv1ViewModel(NotesModel model)
 	{
-		Notes = new ArrayListObservable(String.class);
-		Notes.setArray(new String[0]); //by default we have an empty list	
+		if(model == null)
+		{
+			throw new IllegalArgumentException("model can't be null");
+		}
+		mModel = model;
+		Notes = new CursorObservable<NoteViewModel>(NoteViewModel.class);
+	
+	}
+	
+	public void fillData()
+	{
+		Notes.setCursor(mModel.fetchAllNotes());
 	}
 }

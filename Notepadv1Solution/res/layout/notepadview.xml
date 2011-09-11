@@ -5,6 +5,7 @@
     android:layout_height="wrap_content">
 
 <ListView binding:itemSource="Notes"
+          binding:itemTemplate="@layout/noteview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </LinearLayout>
