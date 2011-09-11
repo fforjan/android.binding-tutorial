@@ -28,14 +28,14 @@ import com.android.demo.notepad1.viewmodel.Notepadv1ViewModel;
 
 public class Notepadv1View extends BindingActivity {
 
-	Notepadv1ViewModel vm;
+	Notepadv1ViewModel mViewModel;
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        vm = new Notepadv1ViewModel(new NotesModel(this).open());
-        vm.fillData();
-        Binder.setAndBindContentView(this, R.layout.notepadview , vm);
-        
+        mViewModel = new Notepadv1ViewModel(new NotesModel(this).open());
+        mViewModel.fillData();
+        setAndBindRootView(R.layout.notepadview , mViewModel);
+        setAndBindOptionsMenu(R.menu.notepadview_options, mViewModel);
     }
 }
