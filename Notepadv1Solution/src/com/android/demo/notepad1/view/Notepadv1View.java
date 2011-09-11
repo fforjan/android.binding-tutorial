@@ -16,7 +16,6 @@
 
 package com.android.demo.notepad1.view;
 
-import gueei.binding.Binder;
 import gueei.binding.app.BindingActivity;
 import android.os.Bundle;
 
@@ -24,11 +23,9 @@ import com.android.demo.notepad1.R;
 import com.android.demo.notepad1.model.NotesModel;
 import com.android.demo.notepad1.viewmodel.Notepadv1ViewModel;
 
-
-
 public class Notepadv1View extends BindingActivity {
 
-	Notepadv1ViewModel mViewModel;
+	private Notepadv1ViewModel mViewModel;
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {

@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2008 Google Inc.
- *
+ * Copyright (C) 2011 Frederic Forjan 
+ * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -20,7 +21,6 @@ import gueei.binding.app.BindingActivity;
 import android.os.Bundle;
 
 public class Notepadv1View extends BindingActivity {
-    private int mNoteNumber = 1;
 
     /** Called when the activity is first created. */
     @Override
